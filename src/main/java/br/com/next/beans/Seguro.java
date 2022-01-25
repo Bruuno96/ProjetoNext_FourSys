@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -34,8 +36,10 @@ public class Seguro {
 	@Column(name="ds_regras")
 	private String regras;
 	
+	@ManyToOne
+	private Apolice apolice;
 	
-	
+
 	public Seguro() {
 		super();
 	}
@@ -77,6 +81,13 @@ public class Seguro {
 	}
 	public void setRegras(String regras) {
 		this.regras = regras;
+	}
+	public Apolice getApolice() {
+		return apolice;
+	}
+
+	public void setApolice(Apolice apolice) {
+		this.apolice = apolice;
 	}
 	@Override
 	public String toString() {

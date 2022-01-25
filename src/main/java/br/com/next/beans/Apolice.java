@@ -58,10 +58,10 @@ public class Apolice {
 	public void setDataAssinatura(Calendar dataAssinatura) {
 		this.dataAssinatura = dataAssinatura;
 	}
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public List<Seguro> getSeguros() {
