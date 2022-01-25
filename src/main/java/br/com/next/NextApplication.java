@@ -67,16 +67,19 @@ public class NextApplication implements CommandLineRunner{
 		Cliente cliente = new Cliente("Bruno","48256878809",endereco);
 
 		clienteRepository.save(cliente);
-
-//		// Cadastrar Pix
-//		Pix pix = new Pix(TipoChavePix.CPF,"chavePix",true);
-//		
-//		List<Pix> listaPix = new ArrayList<>();
-//		listaPix.add(pix);
-//		
-//	
-//		// Cadastrar conta
-//		Conta conta = new Conta(cliente,"39965",2000.00,"banana",Util.toCalendar(Calendar.getInstance().getTime()),3.0,listaPix);
+		// Cadastrar Pix
+		Pix pix = new Pix(TipoChavePix.CPF,"chavePix",true);
+		
+		List<Pix> listaPix = new ArrayList<>();
+		listaPix.add(pix);
+		
+	
+		// Cadastrar conta
+		Conta conta = new Conta(cliente,"39965",0,"banana",Util.toCalendar(Calendar.getInstance().getTime()),3.0,listaPix);
+		
+		contaRepository.save(conta);
+		
+	
 //		
 //		// Cadastrar cartao
 //		Cartao cartao = new Cartao(conta,"123456789","ELO","123456",true,3000.00);

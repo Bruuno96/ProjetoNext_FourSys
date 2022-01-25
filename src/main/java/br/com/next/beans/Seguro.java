@@ -14,7 +14,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 @SequenceGenerator(allocationSize = 1, sequenceName = "sq_seguro", name = "seguro")
-@Table(name = "TB_PIX")
+@Table(name = "TB_SEGURO")
 public class Seguro {
 	
 	@Id

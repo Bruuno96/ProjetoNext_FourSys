@@ -14,16 +14,20 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 
 @Inheritance(strategy = InheritanceType.JOINED)
 @Entity
+@Table(name="TB_CONTA")
+@SequenceGenerator(allocationSize = 1, sequenceName = "seq_conta", name = "conta")
 public class Conta {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "conta")
 	private Integer id;
 
 	@OneToOne

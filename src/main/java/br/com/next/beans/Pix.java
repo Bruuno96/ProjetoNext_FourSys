@@ -39,6 +39,7 @@ public class Pix {
 		this.conteudoChave = conteudoChave;
 		this.isActivated = isActivated;
 	}
+	
 	public int getId() {
 		return id;
 	}
