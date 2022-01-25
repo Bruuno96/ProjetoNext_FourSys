@@ -28,6 +28,17 @@ public class Pix {
 	@Column(name = "bool_isActivated")
 	private boolean isActivated;
 	
+	
+	
+	public Pix() {
+		super();
+	}
+	public Pix(TipoChavePix chave, String conteudoChave, boolean isActivated) {
+		super();
+		this.chave = chave;
+		this.conteudoChave = conteudoChave;
+		this.isActivated = isActivated;
+	}
 	public int getId() {
 		return id;
 	}

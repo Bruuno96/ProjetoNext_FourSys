@@ -14,6 +14,6 @@ public interface ContaRepository extends JpaRepository<Conta, Integer>{
 	 @Query("select c from Conta c where c.numeroConta = ?1")
 	 Conta findByNumberAccount(String conta);
 	 
-	 @Query("select c from Conta c where c.cliente")
-	 Conta findAccountByClient(String cliente);
+//	 @Query("select c from Conta c where c.cliente")
+//	 Conta findAccountByClient(String cliente);
 }

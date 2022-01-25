@@ -17,6 +17,7 @@ public class ApoliceBo {
 	
 	Date dataAtual = new Date();
 	Apolice a = new Apolice();
+	
 	public Date calculaCarencia(Apolice apolice, int prazoCarencia) {
 	//pegar data assinatura - pegar prazo carencia - setar o vencimento carencia
 	Calendar cal = apolice.getDataAssinatura(); 

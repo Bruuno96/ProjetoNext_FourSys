@@ -36,9 +36,21 @@ public class Endereco {
     private String UF;
 	
 	
-	private Cliente cliente;
+    public Endereco() {
+		super();
+	}
 
-    public String getLogradouro() {
+	public Endereco(String logradouro, int numero, String cep, String bairro, String cidade, String uF) {
+		super();
+		this.logradouro = logradouro;
+		this.numero = numero;
+		this.cep = cep;
+		this.bairro = bairro;
+		this.cidade = cidade;
+		UF = uF;
+	}
+
+	public String getLogradouro() {
         return logradouro;
     }
 
@@ -93,13 +105,5 @@ public class Endereco {
     public void setId(Integer id) {
     	this.id = id;
     }
-
-	public Cliente getCliente() {
-		return cliente;
-	}
-
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
 
 }

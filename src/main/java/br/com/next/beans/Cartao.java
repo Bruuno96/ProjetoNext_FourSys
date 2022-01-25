@@ -39,6 +39,22 @@ public class Cartao {
 	@Column(name="vl_limite")
 	private double limite;
 	
+	
+	
+	public Cartao() {
+		super();
+	}
+
+	public Cartao(Conta conta, String numero, String bandeira, String senha, boolean isAtivo, double limite) {
+		super();
+		this.conta = conta;
+		this.numero = numero;
+		this.bandeira = bandeira;
+		this.senha = senha;
+		this.isAtivo = isAtivo;
+		this.limite = limite;
+	}
+	
 	public Integer getId() {
 		return id;
 	}

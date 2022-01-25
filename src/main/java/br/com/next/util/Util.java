@@ -1,6 +1,8 @@
 package br.com.next.util;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import org.springframework.expression.ParseException;
 
@@ -15,6 +17,12 @@ public class Util {
 	public Util() {
 	        
 	    }
+	
+	public static final Calendar toCalendar(Date date){ 
+		  Calendar cal = Calendar.getInstance();
+		  cal.setTime(date);
+		  return cal;
+		}
     
     public static Conta criarConta() throws ParseException, Exception{
         Cliente c = new Cliente();

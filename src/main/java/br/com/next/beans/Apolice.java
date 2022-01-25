@@ -2,6 +2,7 @@ package br.com.next.beans;
 
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -31,10 +32,25 @@ public class Apolice {
 	private Calendar dataAssinatura;
 	
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	private HashMap<Integer,Seguro> seguros;
+	private List<Seguro> seguros;
 	
 	@Column(name="vl_apolice")
 	private double valorApolice;
+	
+	
+	
+	public Apolice() {
+		super();
+	}
+
+
+	public Apolice(Calendar dataAssinatura, List<Seguro> seguros, double valorApolice) {
+		super();
+		this.dataAssinatura = dataAssinatura;
+		this.seguros = seguros;
+		this.valorApolice = valorApolice;
+	}
+	
 	
 	public Calendar getDataAssinatura() {
 		return dataAssinatura;
@@ -48,10 +64,10 @@ public class Apolice {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public HashMap<Integer, Seguro> getSeguros() {
+	public List<Seguro> getSeguros() {
 		return seguros;
 	}
-	public void setSeguros(HashMap<Integer, Seguro> seguros) {
+	public void setSeguros(List<Seguro> seguros) {
 		this.seguros = seguros;
 	}
 	public double getValorApolice() {

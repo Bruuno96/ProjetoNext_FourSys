@@ -31,13 +31,25 @@ public class Cliente {
 	@Enumerated(EnumType.STRING)
 	private TipoCliente tipo;
 	
-	@OneToOne(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Endereco endereco;
 		
 	public Cliente() {
 		this.tipo = TipoCliente.COMUM;
 	}
 	
+	
+	
+	public Cliente(String nome, String cpf, Endereco endereco) {
+		super();
+		this.nome = nome;
+		this.cpf = cpf;
+		this.tipo = TipoCliente.COMUM;
+		this.endereco = endereco;
+	}
+
+
+
 	public String getNome() {
 		return nome;
 	}
@@ -65,11 +77,11 @@ public class Cliente {
 		this.endereco = endereco;
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	

@@ -48,6 +48,23 @@ public class Conta {
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private List<Pix> pix;
 	
+	
+	
+	public Conta() {
+		super();
+	}
+
+	public Conta(Cliente cliente, String numeroConta, double saldo, String senha, Calendar dataAbertura, double taxa,
+			List<Pix> pix) {
+		super();
+		this.cliente = cliente;
+		this.numeroConta = numeroConta;
+		this.saldo = saldo;
+		this.senha = senha;
+		this.dataAbertura = dataAbertura;
+		this.taxa = taxa;
+		this.pix = pix;
+	}
 	public Calendar getDataAbertura() {
 		return dataAbertura;
 	}

@@ -34,6 +34,20 @@ public class Seguro {
 	@Column(name="ds_regras")
 	private String regras;
 	
+	
+	
+	public Seguro() {
+		super();
+	}
+	
+	public Seguro(double valor, Calendar carencia, String nome, String regras) {
+		super();
+		this.valor = valor;
+		this.carencia = carencia;
+		this.nome = nome;
+		this.regras = regras;
+	}
+	
 	public double getValor() {
 		return valor;
 	}
